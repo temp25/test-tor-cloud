@@ -21,4 +21,4 @@ chmod +x $ARTIFACT_NAME
 
 ls -lah
 
-./$ARTIFACT_NAME -port 80
+nohup ./$ARTIFACT_NAME -h 0.0.0.0 -p 80 &
