@@ -5,10 +5,20 @@ function download_latest_release() {
 
 ARTIFACT_NAME="cloud-torrent_linux_386"
 
+echo "Downloading artifact, $ARTIFACT_NAME.gz"
+
 download_latest_release jpillora/cloud-torrent 386
+
+echo "Artifact $ARTIFACT_NAME.gz downloaded successfully"
+
+echo "Unzipping Artifact $ARTIFACT_NAME.gz"
 
 gunzip "$ARTIFACT_NAME.gz"
 
+echo "Artifact $ARTIFACT_NAME.gz unzipped successfully"
+
 chmod +x $ARTIFACT_NAME
+
+ls -lah
 
 nohup ./$ARTIFACT_NAME -port 80 &
