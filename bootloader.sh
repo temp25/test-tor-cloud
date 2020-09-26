@@ -19,6 +19,6 @@ echo "Artifact $ARTIFACT_NAME.gz unzipped successfully"
 
 chmod +x $ARTIFACT_NAME
 
-ls -lah
+echo "PORT : $PORT"
 
 ./$ARTIFACT_NAME --port 80
