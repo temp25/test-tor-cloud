@@ -21,4 +21,8 @@ echo "Artifact $ARTIFACT_NAME.gz unzipped successfully"
 
 chmod +x $ARTIFACT_NAME
 
+# Adding initial config file
+mkdir "$HOME/.cloud-torrent"
+touch "$HOME/.cloud-torrent/cloud-torrent.yaml"
+
 ./$ARTIFACT_NAME --port $PORT --auth "$AUTH_USER:$AUTH_PASSWORD"
