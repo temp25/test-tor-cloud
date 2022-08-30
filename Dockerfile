@@ -10,4 +10,4 @@ COPY . .
 
 CMD sh ./bootloader.sh
 
-EXPOSE {PORT}
+EXPOSE ${PORT}
