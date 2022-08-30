@@ -19,4 +19,13 @@ echo "Artifact $ARTIFACT_NAME.gz unzipped successfully"
 
 chmod +x $ARTIFACT_NAME
 
+echo "Listing all env variables using **env**"
+echo ""
+env
+echo ""
+echo "Listing all env variables using **printenv**"
+echo ""
+printenv
+echo ""
+
 ./$ARTIFACT_NAME --port $PORT --auth "$AUTH_USER:$AUTH_PASSWORD"
