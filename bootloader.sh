@@ -19,4 +19,10 @@ echo "Artifact $ARTIFACT_NAME.gz unzipped successfully"
 
 chmod +x $ARTIFACT_NAME
 
+echo ""
+echo "PORT: ${PORT}"
+echo "AUTH_USER: ${AUTH_USER}"
+echo "AUTH_PASSWORD: ${AUTH_PASSWORD}"
+echo ""
+
 ./$ARTIFACT_NAME --port $PORT --auth "$AUTH_USER:$AUTH_PASSWORD"
